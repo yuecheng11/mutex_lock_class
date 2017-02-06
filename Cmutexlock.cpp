@@ -1,22 +1,6 @@
-#include<iostream>
-#include <unistd.h>
-#include<pthread.h>
-#include <errno.h>
-using namespace std;
+#include "Cmutexlock.hpp"
 
-class MutexLock
-{
-public:
-	MutexLock();
-	~MutexLock();
-	void lock();
-	void unlock();
-private:
-	void mutexinit();
-	void mutexDestroy();
-private:
-	pthread_mutex_t m_Mutex;
-};
+using namespace std;
 
 MutexLock::MutexLock()
 {
